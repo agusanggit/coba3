@@ -389,4 +389,4 @@ Di halaman ini Anda dapat mengubah mode tampilan entah menggunakan mode terang, 
 
 ![Tampilan](./ss/Screenshot%202025-05-18%20at%2017.01.17.png)
 
-![Tampilan](./ss/Screenshot%202025-05-18%20at%2017.01.38.png)
+![Tampilan](/ss/Screenshot 2025-05-23 153210.png)
