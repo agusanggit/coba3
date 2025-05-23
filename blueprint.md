@@ -28,3 +28,50 @@ flowchart TD
 
     B --> H[Audit Trail]
 ```
+## Sequence Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AI
+    participant System
+    participant Database
+
+    User->>System: Login
+    System->>Database: Validasi kredensial
+    Database-->>System: Hasil validasi
+    System-->>User: Halaman Dashboard
+
+    User->>System: Upload Surat Masuk
+    System->>AI: Ekstraksi Otomatis (OCR, NLP)
+    AI-->>System: Metadata Surat (Nomor, Tanggal, Pengirim, Perihal)
+    System->>Database: Simpan Surat Masuk
+    Database-->>System: Surat Masuk Disimpan
+
+    System->>AI: Klasifikasi Surat
+    AI-->>System: Saran Kategori Surat
+    System->>Database: Simpan Kategori Surat
+    Database-->>System: Kategori Disimpan
+
+    System->>AI: Ringkasan Surat
+    AI-->>System: Ringkasan Surat
+    System->>User: Tampilkan Ringkasan Surat
+
+    User->>System: Disposisi Surat
+    System->>AI: Saran Disposisi
+    AI-->>System: Saran Disposisi
+    System->>Database: Simpan Disposisi
+    Database-->>System: Disposisi Disimpan
+
+    User->>System: Buat Surat Keluar
+    System->>AI: Ringkasan Surat Keluar
+    AI-->>System: Ringkasan Surat Keluar
+    System->>Database: Simpan Surat Keluar
+    Database-->>System: Surat Keluar Disimpan
+    System->>User: Tampilkan Ringkasan Surat Keluar
+
+    User->>System: Request Laporan
+    System->>Database: Ambil Data Surat Masuk & Keluar
+    Database-->>System: Data Laporan
+    System->>User: Tampilkan Laporan
+```
