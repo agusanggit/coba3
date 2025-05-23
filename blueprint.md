@@ -75,3 +75,10 @@ sequenceDiagram
     Database-->>System: Data Laporan
     System->>User: Tampilkan Laporan
 ```
+### Penjelasan:
+- **User** melakukan login ke aplikasi dan mengakses halaman **Dashboard** setelah kredensial tervalidasi.
+- **User** mengunggah **Surat Masuk**, yang diproses oleh **AI** untuk ekstraksi metadata, klasifikasi, dan ringkasan surat.
+- **System** menyimpan data surat dan kategori ke dalam **Database**.
+- **User** dapat melakukan disposisi surat, dengan bantuan **AI** yang memberikan saran disposisi.
+- **User** dapat membuat **Surat Keluar**, yang juga akan diproses oleh **AI** untuk menghasilkan ringkasan surat.
+- **User** dapat meminta laporan terkait surat masuk dan keluar, yang akan diambil dari **Database** dan ditampilkan oleh **System**.
